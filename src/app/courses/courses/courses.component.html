@@ -1,0 +1,29 @@
+
+<mat-card>
+  <mat-card-content>
+    <mat-toolbar color="primary">
+      <span>Courses Avaliables</span>
+    </mat-toolbar>
+<table mat-table [dataSource]="courses" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name"> <!--nome do meu atributo-->
+    <th mat-header-cell *matHeaderCellDef> Courses </th>  <!--nome da coluna-->
+    <td mat-cell *matCellDef="let element"> {{ element.name }} </td> <!--Populando a minha tabela -> element.<NOME DO ATRIBUTO>-->
+  </ng-container>
+
+  <!-- Category Column -->
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> Category </th>
+    <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</mat-card-content>
+</mat-card>
+
