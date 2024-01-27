@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; // auxilia a fazer requisição ao meu back end
 
 import { Course } from './../model/course';
-import { Observable, first, take, tap } from 'rxjs';
+import { Observable, delay, first, take, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,7 @@ export class CoursesService {
   return  this.httpCLient.get<Course[]>(this.endPoint)  // return Observable<Course>
   // o pipe serve para manipular os dados que vem da requisição
   .pipe(
+    delay(2000),
     first(),
     tap(courses => console.log(courses)),
   )
