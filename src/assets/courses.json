@@ -6,5 +6,5 @@
   { "_id": "5", "name": "JavaScript", "category":"Front-End"},
   { "_id": "6", "name": "Jacoco", "category": "Test" },
   { "_id": "7", "name": "Junit", "category": "Test" },
-  { "_id": "8", "name": "Angular","category":"test"}
+  { "_id": "8", "name": "Angular","category":"Test"}
 ]

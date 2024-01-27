@@ -9,8 +9,8 @@ import { Observable, delay, first, take, tap } from 'rxjs';
 })
 export class CoursesService {
 
-  //endPoint: string = 'http://localhost:3000/courses';
-  private readonly endPoint: string = '/asses/courses.json';
+  //endPoint: string = 'http://localhost:8080/pi/courses';
+  private readonly endPoint: string = '/assets/courses.json';
 
   //fazendo a injeção de dependencias no construtor do httpclient
   constructor(private httpCLient: HttpClient) { }
